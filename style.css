@@ -1,0 +1,39 @@
+.background{
+    width:500px;
+    height:500px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: bisque;
+    border:5px solid beige;
+}
+
+#todo-form{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height:200px;
+}
+
+#todo-form input{
+    width:300px;
+    height:100px;
+    font-size:30px;
+}
+#todo-list{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    list-style:none;
+}
+
+#todo-list li span{
+    margin-right:20px;
+    font-size:20px;
+    width:10px;
+    max-width:50px;
+}
+
+#todo-list li button{
+    width:30px;
+}
