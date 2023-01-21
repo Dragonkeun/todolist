@@ -23,7 +23,7 @@ function paintToDo(newToDo) {
   liCreate.id = newToDo.id; //li에 id 요소를 넣어줌
   const spanCreate = document.createElement("span");
   const buttonCreate = document.createElement("button"); //할일을 삭제할 수 있는 버튼을 만듬
-  buttonCreate.innerText = "🖕";
+  buttonCreate.innerText = "❌";
   buttonCreate.addEventListener("click", deleteToDo); // 버튼이 클릭되면 할일이 삭제될 수 있도록 함수를 만들거임, 함수 이름은 deleteToDo
   liCreate.appendChild(spanCreate); //span을 li안에 넣어줌 <li> <span> </span> </li> 이런 식으로. 왜냐하면 나중에 할일을 삭제하는 버튼도 만들 것이기 때문
   liCreate.appendChild(buttonCreate); //버튼도 li안에 넣어줌
@@ -54,3 +54,6 @@ if (savedToDos) {
   //forEach를 통해 Local Storage 에 할일 목록에 밥 먹기, 잠 자기 가 있으면 밥 먹기 접근하고, 잠 자기를 접근함. 그러므로 paintToDo 호출하면 끝
   //밥 먹기, 잠자기를 접근하다가 id로 추가하는 것으로 프로그래밍을 수정했을 때부터는 할 일, id까지 접근함
 }
+
+const addBtn = document.querySelector(".add-btn");
+addBtn.addEventListener("click", paintToDo)
